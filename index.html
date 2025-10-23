@@ -56,18 +56,18 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
 
-        map.createPane('pane_HereWegoTerrain_0');
-        map.getPane('pane_HereWegoTerrain_0').style.zIndex = 400;
-        var layer_HereWegoTerrain_0 = L.tileLayer('https://1.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/terrain.day/{z}/{x}/{y}/256/png8?app_id=eAdkWGYRoc4RfxVo0Z4B&app_code=TrLJuXVK62IQk0vuXFzaig&lg=eng', {
-            pane: 'pane_HereWegoTerrain_0',
-            opacity: 1.0,
-            attribution: '<a href="https://developer.here.com/documentation/map-tile/dev_guide/topics/resource-copyright.html">Map tiles by Here Wego</a>',
+        map.createPane('pane_basemap_0');
+        map.getPane('pane_basemap_0').style.zIndex = 400;
+        var layer_basemap_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            pane: 'pane_basemap_0',
+            opacity: 0.6,
+            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Basemap by Google</a>',
             minZoom: 1,
             maxZoom: 19,
             minNativeZoom: 0,
             maxNativeZoom: 20
         });
-        map.addLayer(layer_HereWegoTerrain_0);
+        map.addLayer(layer_basemap_0);
 
         function style_counties_ny_1_0() {
             return {
